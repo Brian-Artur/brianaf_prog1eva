@@ -1,10 +1,10 @@
 package cesar;
 
 import menu.Menu;
-import utils.UtilEncry;
-import utils.UtilGetData;
+import utils.UtilCifrado;
+import utils.UtilObtencionDatos;
 
-public class CesarCip {
+public class CifradoCesar {
 
   private static int move = 1; // Valor por defecto
 
@@ -12,7 +12,7 @@ public class CesarCip {
     boolean back = false;
 
     while (!back) {
-      int option = UtilGetData.mostrarMenu(
+      int option = UtilObtencionDatos.mostrarMenu(
           Menu.menuCesar.formatted(move),
           1,
           5);
@@ -32,7 +32,7 @@ public class CesarCip {
   }
 
   private static void configDesp() {
-    int ch = UtilGetData.obtenerEntero(
+    int ch = UtilObtencionDatos.obtenerEntero(
         "Introduce el desplazamiento (1-25, actual: " + move + "): ");
     if (ch < 1 || ch > 25) {
       System.out.println("Error: el desplazamiento debe estar entre 1 y 25.");
@@ -43,14 +43,14 @@ public class CesarCip {
   }
 
   private static void cifrar() {
-    String txt = UtilGetData.obtenerCadena("Introduce el txt a cifrar: ");
-    String cifrado = UtilEncry.cifrar(txt, move);
+    String txt = UtilObtencionDatos.obtenerCadena("Introduce el txt a cifrar: ");
+    String cifrado = UtilCifrado.cifrar(txt, move);
     System.out.println("txt cifrado: " + cifrado);
   }
 
   private static void descifrar() {
-    String txt = UtilGetData.obtenerCadena("Introduce el txt a descifrar: ");
-    String descifrado = UtilEncry.descifrar(txt, move);
+    String txt = UtilObtencionDatos.obtenerCadena("Introduce el txt a descifrar: ");
+    String descifrado = UtilCifrado.descifrar(txt, move);
     System.out.println("txt descifrado: " + descifrado);
   }
 }

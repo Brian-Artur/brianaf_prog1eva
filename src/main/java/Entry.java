@@ -1,23 +1,23 @@
-import utils.UtilGetData;
+import utils.UtilObtencionDatos;
 import ahorcado.JuegoAhorcado;
 import calculadora.Calculadora;
-import cesar.CesarCip;
+import cesar.CifradoCesar;
 import menu.Menu;
-import number.changNum;
+import numeracion.CambioNumeracion;
 
 public class Entry {
   public static void main(String[] args) {
     boolean continuar = true;
 
     while (continuar) {
-      int opcion = UtilGetData.mostrarMenu(
-       Menu.menuEntry,
+      int opcion = UtilObtencionDatos.mostrarMenu(
+       Menu.menuPrincipal,
         1, 5
       );
 
       switch (opcion) {
         case 1 -> {
-          boolean salir = changNum.exe();
+          boolean salir = CambioNumeracion.ejecutar();
            if (salir) {
             continuar = false;
           }
@@ -35,7 +35,7 @@ public class Entry {
           }
         }
         case 4 -> {
-          boolean salir = CesarCip.exe();
+          boolean salir = CifradoCesar.exe();
           if (salir) {
             continuar = false;
           }

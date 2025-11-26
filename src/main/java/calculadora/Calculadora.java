@@ -1,7 +1,7 @@
 package calculadora;
 
 import menu.Menu;
-import utils.UtilGetData;
+import utils.UtilObtencionDatos;
 
 public class Calculadora {
 
@@ -9,7 +9,7 @@ public class Calculadora {
       boolean volver = false;
 
       while (!volver) {
-        int opcion = UtilGetData.mostrarMenu(
+        int opcion = UtilObtencionDatos.mostrarMenu(
             Menu.menuCalculadora,
             1, 
             7
@@ -32,29 +32,29 @@ public class Calculadora {
     }
 
   private static void sum() {
-    int a = UtilGetData.obtenerEntero("Primer número: ");
-    int b = UtilGetData.obtenerEntero("Segundo número: ");
+    int a = UtilObtencionDatos.obtenerEntero("Primer número: ");
+    int b = UtilObtencionDatos.obtenerEntero("Segundo número: ");
     int res = a + b;
     System.out.println("Resultado es: " + res);
   }
 
     private static void subt() {
-    int a = UtilGetData.obtenerEntero("Primer número: ");
-    int b = UtilGetData.obtenerEntero("Segundo número: ");
+    int a = UtilObtencionDatos.obtenerEntero("Primer número: ");
+    int b = UtilObtencionDatos.obtenerEntero("Segundo número: ");
     int res = a + b;
     System.out.println("Resultado es: " + res);
   }
 
     private static void mult() {
-    int a = UtilGetData.obtenerEntero("Primer número: ");
-    int b = UtilGetData.obtenerEntero("Segundo número: ");
+    int a = UtilObtencionDatos.obtenerEntero("Primer número: ");
+    int b = UtilObtencionDatos.obtenerEntero("Segundo número: ");
     int res = a + b;
     System.out.println("Resultado es: " + res);
   }
 
   private static void divi() {
-    int a = UtilGetData.obtenerEntero("Dividendo: ");
-    int b = UtilGetData.obtenerEntero("Divisor: ");
+    int a = UtilObtencionDatos.obtenerEntero("Dividendo: ");
+    int b = UtilObtencionDatos.obtenerEntero("Divisor: ");
     if (b == 0) {
       System.out.println("Error: no se puede dividir por cero.");
       return;
@@ -64,8 +64,8 @@ public class Calculadora {
   }
 
   private static void modu() {
-    int a = UtilGetData.obtenerEntero("Dividendo: ");
-    int b = UtilGetData.obtenerEntero("Divisor: ");
+    int a = UtilObtencionDatos.obtenerEntero("Dividendo: ");
+    int b = UtilObtencionDatos.obtenerEntero("Divisor: ");
     if (b == 0) {
         System.out.println("Error: no se puede dividir por cero.");
         return;

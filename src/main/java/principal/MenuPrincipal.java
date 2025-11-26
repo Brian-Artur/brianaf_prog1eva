@@ -1,6 +1,6 @@
-package menu;
+package principal;
 
-public class Menu {
+public class MenuPrincipal {
   public static String menuCaNum = """
       === CONVERTIR NUMERACIÓN ===
       1. Convertir a binario

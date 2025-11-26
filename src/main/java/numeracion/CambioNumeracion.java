@@ -6,7 +6,7 @@ import utilidades.UtilCambioNumeracion;
 
 public class CambioNumeracion {
 
-  public static void ejecutar() {
+  public static boolean ejecutar() {
     boolean volver = false;
 
     while (!volver) {
@@ -20,13 +20,12 @@ public class CambioNumeracion {
         case 2 -> convertirBinarioADecimal();
         case 3 -> volver = true; // Volver al menú principal
         case 4 -> {
-          // Salir del programa: delegamos al menú principal
-          // Simplemente salimos del bucle y del método
           System.out.println("Saliendo del programa...");
-
+          return true;
         }
       }
     }
+    return false;
   }
 
   private static void convertirDecimalABinario() {
