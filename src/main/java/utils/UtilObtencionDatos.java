@@ -9,16 +9,20 @@ public class UtilObtencionDatos {
     int option;
     do {
       System.out.print(menu);
+
       while (!sc.hasNextInt()) {
         System.out.println("Por favor, introduce un número válido.");
         sc.next();
         System.out.print(menu);
       }
+
       option = sc.nextInt();
       sc.nextLine(); // limpiar buffer
+
       if (option < min || option > max) {
         System.out.println("Opción inválida.");
       }
+      
     } while (option < min || option > max);
     return option;
   }
